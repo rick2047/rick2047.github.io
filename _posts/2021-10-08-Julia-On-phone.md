@@ -40,7 +40,9 @@ proot-distro login ubuntu
 ```
 
 Now you should see the familiar ubuntu bash prompt like
-![Linux on Android](images/1633549280164.jpeg)
+
+![_config.yml]({{ site.baseurl }}/images/1633549280164.jpeg)
+
 ```console 
 root@localhost:~#
 ```
@@ -79,3 +81,5 @@ julia> using Pluto; Pluto.run()
 Pluto should give you a link which you can copy paste into your phone browser and then code away. Here is a gif I made of the experience.
 
 Pluto running through android browser
+
+![_config.yml]({{ site.baseurl }}/images/1633549987033.gif)
