@@ -3,12 +3,14 @@ layout: post
 title: Running Julia on an Android Device
 ---
 
-A few days ago I was bored. The only good cure I know of boredom is smashing things together to see if they can work together. This incidentally is also why I love Julia, composability is a stated primary goal. I've smashed julia packages together before, and heard the satisfying click first hand. But that is a post for a later date. That day my boredom lead me to making julia work on my android phone.
+A few days ago I was bored. The only good cure I know of boredom is smashing things together to see if they can work together. This incidentally is also why I love Julia, composability is a stated primary goal. [I've smashed julia packages together before](https://github.com/JuliaMath/Interpolations.jl/pull/414), and heard the satisfying click first hand. But that is a post for a later date. That day my boredom lead me to [making julia work on my android phone](https://www.linkedin.com/feed/update/urn:li:activity:6850505288408145920/).
 
-I often forget that I currently carry a more powerful machine in my pocket (OnePlus 8T, 8gb ram with an octa-core processor) than my first desktop (a blazing fast Pentium 4 with 512mb ram). But that desktop was used to create and experiment while my phone is only being used to consume. Its not like other people don't use their phones to create, people are making entire careers on tiktok. The difference seems to be lack of tooling. I saw this post by my colleague Matthijs Cox running Julia on his phone using replit. While replit is an awesome tool, it only offers Julia 1.4 which is plagued by latency issues. After working with Julia 1.6, which solved a lot of these issues, I can't go back to that. Time to take matters into my own hands.
+I often forget that I currently carry a more powerful machine in my pocket (OnePlus 8T, 8gb ram with an octa-core processor) than my first desktop (a blazing fast Pentium 4 with 512mb ram). But that desktop was used to create and experiment while my phone is only being used to consume. Its not like other people don't use their phones to create, people are making entire careers on tiktok. The difference seems to be lack of tooling. I saw [this post](https://www.linkedin.com/posts/matthijscox_someone-asked-how-to-easily-compute-integer-activity-6840208526598582272-Tc9K) by my colleague running Julia on his phone using replit. While replit is an awesome tool, it only offers Julia 1.4 which is [plagued by latency issues](https://discourse.julialang.org/t/will-julia-ever-fix-its-using-latency-problems/50659). After working with Julia 1.6, which [solved a lot of these issues](https://lwn.net/Articles/856819/), I can't go back to that. Time to take matters into my own hands.
 
 ## Step 1: Terminal emulation on Android
-Termux provides terminal emulation and basic linux packages on android. The recommended way to install is using F-Droid. (There is a Google Play Store app but it has stopped receiving updates for technical reasons). You can either search for termux in F-Droid, or directly download the apk from this page (I'm not sure if you can update it then. Once installed, opening the app should give you a familiar linux bash shell.
+Termux provides terminal emulation and basic linux packages on android. The recommended way to install is using [F-Droid](https://f-droid.org/en/). (There is a Google Play Store app but it has stopped receiving updates for [technical reasons](https://wiki.termux.com/wiki/Termux_Google_Play)). You can either search for termux in F-Droid, or directly download the apk from [this page](https://f-droid.org/en/packages/com.termux/) (I'm not sure if you can update it then. Once installed, opening the app should give you a familiar linux bash shell.
+
+![_config.yml]({{ site.baseurl }}/images/1633549280164.jpeg)
 
 Update all the base packages by running this in the terminal.
 
@@ -19,7 +21,7 @@ pkg update && pkg upgrade
 This may take some time depending upon how fast your phone is.
 
 ## Step 2: Ubuntu on Android
-While android uses a linux kernel, what we colloquially refer to as "Linux OS" also includes several standard libraries, additional software and most often a package manager. To get one of those distributions running we will use proot, which emulates a root file system from any directory. To make it even easier, I found proot-distro which can install several distributions. (I chose ubuntu because that is what I'm most familiar with. But there are other options available).
+While android uses a linux kernel, what we colloquially refer to as "Linux OS" also includes several standard libraries, additional software and most often a package manager. To get one of those distributions running we will use proot, which emulates a root file system from any directory. To make it even easier, I found [proot-distro](https://github.com/termux/proot-distro) which can install several distributions. (I chose ubuntu because that is what I'm most familiar with. But there are other options available).
 
 Install proot-distro by entering
 
@@ -40,8 +42,6 @@ proot-distro login ubuntu
 ```
 
 Now you should see the familiar ubuntu bash prompt like
-
-![_config.yml]({{ site.baseurl }}/images/1633549280164.jpeg)
 
 ```console 
 root@localhost:~#
