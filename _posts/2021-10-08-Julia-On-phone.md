@@ -40,7 +40,7 @@ proot-distro login ubuntu
 ```
 
 Now you should see the familiar ubuntu bash prompt like
-
+![Linux on Android](images/1633549280164.jpeg)
 ```console 
 root@localhost:~#
 ```
