@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Design engineer developing lithography applications.
 
-### More Information
+### This Blog 
 
-A place to include any other types of information that you'd like to include about yourself.
+An adventure log for my excursions in unnecessary but fun programming experiments. 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[paresh2047@gmail.com](mailto:paresh2047@gmail.com)w
