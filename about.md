@@ -12,4 +12,4 @@ An adventure log for my excursions in unnecessary but fun programming experiment
 
 ### Contact me
 
-[paresh2047@gmail.com](mailto:paresh2047@gmail.com)w
+[paresh2047@gmail.com](mailto:paresh2047@gmail.com)
