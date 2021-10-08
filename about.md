@@ -6,7 +6,7 @@ permalink: /about/
 
 Design engineer developing lithography applications.
 
-### This Blog 
+### This Blog
 
 An adventure log for my excursions in unnecessary but fun programming experiments. 
 
